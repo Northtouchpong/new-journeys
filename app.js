@@ -102,7 +102,7 @@ function renderHTML(){
   }else if(imgs.length>1){
    lines.push('\t<div class="row justify-content-center no-gutters mb-4">');
    for(const [localIndex,b] of imgs.entries()){
-    const width=imgs.length===2?'col-md-'+(localIndex===0?'5':'6'):imgs.length===3?'col-md-4':'col-md-6';
+    const width=imgs.length===3?'col-md-4':'col-md-6';
     lines.push(`\t\t<div class="${width}">`);
     if(assignedFile(b))lines.push(`\t\t\t<figure class="text-center mb-md-0"><img class="img-fluid" src="${paths.get(b)}" /></figure>`);
     else lines.push(`\t\t\t<!-- ไม่พบไฟล์รูปภาพลำดับ ${imageNumber(b)+1} -->`);
